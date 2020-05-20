@@ -3,24 +3,17 @@ import { render } from 'react-dom';
 import Hello from './Hello';
 import './style.css';
 
-class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      name: 'React'
-    };
-  }
 
-  render() {
+const  App =() => {
+  let msg = "world";
     return (
       <div>
-        <Hello name={this.state.name} />
+        <Hello name={msg} />
         <p>
           Start editing to see some magic happen :)
         </p>
       </div>
     );
-  }
-}
+};
 
 render(<App />, document.getElementById('root'));
